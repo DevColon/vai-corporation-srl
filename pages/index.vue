@@ -74,6 +74,11 @@ const testimonial = ref({
   ]
 })
 
+// Invertir colores de secciones
+const gallery = ref({
+  title: 'Nuestra Galería'
+})
+
 // Bloque de cita del author
 const blockquote = ref({
   quote: 'Las Oportunidades Grandes Nacen De Haber Sabido Aprovechar Las Pequeñas',
@@ -174,9 +179,9 @@ const blockquote = ref({
 
   <!-- TODO: ver que el cliente quiere -->
   <!-- Gallery -->
-  <section id="testimonios">
+  <section id="galeria">
     <div class="max-w-screen-xl mx-auto">
-      <SectionBase :content="testimonial">
+      <SectionBase :content="gallery">
         <template #content>
           <GalleryMasonry />
         </template>
@@ -184,7 +189,7 @@ const blockquote = ref({
     </div>
   </section>
 
-  <section id="testimonios">
+  <!-- <section id="testimonios">
     <div class="max-w-screen-xl mx-auto">
       <SectionBase :content="testimonial">
         <template #content>
@@ -192,7 +197,7 @@ const blockquote = ref({
         </template>
       </SectionBase>
     </div>
-  </section>
+  </section> -->
 
   <!-- Bloque de cita -->
   <section>
