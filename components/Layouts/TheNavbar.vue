@@ -10,7 +10,7 @@ const navLinkItems = ref([
 	{ text: 'Inicio', href: '#inicio' },
 	{ text: 'Nosotros', href: '#nosotros' },
 	{ text: 'Servicios', href: '#servicios' },
-	{ text: 'Galeria', href: '#testimonios' },
+	{ text: 'Galeria', href: '#galeria' },
 	{ text: 'Contacto', href: 'javascript:void(0)' }
 ])
 
