@@ -17,8 +17,7 @@ const whoWeAre = ref({
 
 // Listado de servicios
 const services = ref({
-  title: 'Nuestros Servicios',
-  description: '¿Tienes un proyecto en mente? Nosotros lo hacemos realidad. Ofrecemos una amplia gama de servicios de construcción, desde la cimentación hasta los acabados finales.',
+  title: 'Servicios',
   content: [
     {
       title: 'Construccion',
@@ -52,32 +51,7 @@ const services = ref({
 })
 
 // Invertir colores de secciones
-const testimonial = ref({
-  title: 'Lo que dicen nuestros clientes',
-  description: 'Déjanos mostrarte por qué nuestros clientes nos eligen una y otra vez. Descubre cómo hemos superado sus expectativas en cada proyecto.',
-  content: [
-    {
-      value: '"The team went above and beyond to ensure my issue was resolved quickly and efficiently. Truly outstanding!"',
-      author: 'Jessica Devis',
-      position: ' Full Stack Developer @Netflix'
-    },
-    {
-      value: '"The team went above and beyond to ensure my issue was resolved quickly and efficiently. Truly outstanding!"',
-      author: 'Jessica Devis',
-      position: ' Full Stack Developer @Netflix'
-    },
-    {
-      value: '"The team went above and beyond to ensure my issue was resolved quickly and efficiently. Truly outstanding!"',
-      author: 'Jessica Devis',
-      position: ' Full Stack Developer @Netflix'
-    }
-  ]
-})
-
-// Invertir colores de secciones
-const gallery = ref({
-  title: 'Nuestra Galería'
-})
+const inverted = ref(true)
 
 // Bloque de cita del author
 const blockquote = ref({
@@ -88,124 +62,290 @@ const blockquote = ref({
 </script>
 <template>
   <!-- Seccion de enganche -->
-  <div id="inicio" class="bg-gradient-to-t from-white to-gray-100 dark:from-gray-900">
-    <UContainer>
-      <div class="relative isolate px-6 pt-14 lg:px-8 flex items-center" style="min-height: calc(100vh - 4rem)">
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true">
-          <div
-            class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#078ef0] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+  <UContainer>
+    <section class="overflow-hidden flex items-center" style="min-height: calc(100vh - 4rem)">
+      <div class="flex flex-wrap items-center justify-between -mx-4">
+        <div class="w-full px-4 lg:w-6/12">
+          <div class="flex items-center -mx-3 sm:-mx-4">
+            <div class="w-full px-3 sm:px-4 xl:w-1/2">
+              <div class="py-3 sm:py-4">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/about/about-01/image-1.jpg" alt=""
+                  class="w-full rounded-2xl">
+              </div>
+              <div class="py-3 sm:py-4">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/about/about-01/image-2.jpg" alt=""
+                  class="w-full rounded-2xl">
+              </div>
+            </div>
+            <div class="w-full px-3 sm:px-4 xl:w-1/2">
+              <div class="relative z-10 my-4">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/about/about-01/image-3.jpg" alt=""
+                  class="w-full rounded-2xl">
+                <span class="absolute -right-7 -bottom-7 z-[-1]">
+                  <svg width="134" height="106" viewBox="0 0 134 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="#3056D3">
+                    </circle>
+                    <circle cx="16.3333" cy="104" r="1.66667" transform="rotate(-90 16.3333 104)" fill="#3056D3">
+                    </circle>
+                    <circle cx="31" cy="104" r="1.66667" transform="rotate(-90 31 104)" fill="#3056D3"></circle>
+                    <circle cx="45.6667" cy="104" r="1.66667" transform="rotate(-90 45.6667 104)" fill="#3056D3">
+                    </circle>
+                    <circle cx="60.3334" cy="104" r="1.66667" transform="rotate(-90 60.3334 104)" fill="#3056D3">
+                    </circle>
+                    <circle cx="88.6667" cy="104" r="1.66667" transform="rotate(-90 88.6667 104)" fill="#3056D3">
+                    </circle>
+                    <circle cx="117.667" cy="104" r="1.66667" transform="rotate(-90 117.667 104)" fill="#3056D3">
+                    </circle>
+                    <circle cx="74.6667" cy="104" r="1.66667" transform="rotate(-90 74.6667 104)" fill="#3056D3">
+                    </circle>
+                    <circle cx="103" cy="104" r="1.66667" transform="rotate(-90 103 104)" fill="#3056D3"></circle>
+                    <circle cx="132" cy="104" r="1.66667" transform="rotate(-90 132 104)" fill="#3056D3"></circle>
+                    <circle cx="1.66667" cy="89.3333" r="1.66667" transform="rotate(-90 1.66667 89.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="16.3333" cy="89.3333" r="1.66667" transform="rotate(-90 16.3333 89.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="31" cy="89.3333" r="1.66667" transform="rotate(-90 31 89.3333)" fill="#3056D3">
+                    </circle>
+                    <circle cx="45.6667" cy="89.3333" r="1.66667" transform="rotate(-90 45.6667 89.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="60.3333" cy="89.3338" r="1.66667" transform="rotate(-90 60.3333 89.3338)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="88.6667" cy="89.3338" r="1.66667" transform="rotate(-90 88.6667 89.3338)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="117.667" cy="89.3338" r="1.66667" transform="rotate(-90 117.667 89.3338)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="74.6667" cy="89.3338" r="1.66667" transform="rotate(-90 74.6667 89.3338)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="103" cy="89.3338" r="1.66667" transform="rotate(-90 103 89.3338)" fill="#3056D3">
+                    </circle>
+                    <circle cx="132" cy="89.3338" r="1.66667" transform="rotate(-90 132 89.3338)" fill="#3056D3">
+                    </circle>
+                    <circle cx="1.66667" cy="74.6673" r="1.66667" transform="rotate(-90 1.66667 74.6673)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="1.66667" cy="31.0003" r="1.66667" transform="rotate(-90 1.66667 31.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="16.3333" cy="74.6668" r="1.66667" transform="rotate(-90 16.3333 74.6668)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="16.3333" cy="31.0003" r="1.66667" transform="rotate(-90 16.3333 31.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="31" cy="74.6668" r="1.66667" transform="rotate(-90 31 74.6668)" fill="#3056D3">
+                    </circle>
+                    <circle cx="31" cy="31.0003" r="1.66667" transform="rotate(-90 31 31.0003)" fill="#3056D3">
+                    </circle>
+                    <circle cx="45.6667" cy="74.6668" r="1.66667" transform="rotate(-90 45.6667 74.6668)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="45.6667" cy="31.0003" r="1.66667" transform="rotate(-90 45.6667 31.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="60.3333" cy="74.6668" r="1.66667" transform="rotate(-90 60.3333 74.6668)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="60.3333" cy="30.9998" r="1.66667" transform="rotate(-90 60.3333 30.9998)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="88.6667" cy="74.6668" r="1.66667" transform="rotate(-90 88.6667 74.6668)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="88.6667" cy="30.9998" r="1.66667" transform="rotate(-90 88.6667 30.9998)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="117.667" cy="74.6668" r="1.66667" transform="rotate(-90 117.667 74.6668)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="117.667" cy="30.9998" r="1.66667" transform="rotate(-90 117.667 30.9998)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="74.6667" cy="74.6668" r="1.66667" transform="rotate(-90 74.6667 74.6668)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="74.6667" cy="30.9998" r="1.66667" transform="rotate(-90 74.6667 30.9998)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="103" cy="74.6668" r="1.66667" transform="rotate(-90 103 74.6668)" fill="#3056D3">
+                    </circle>
+                    <circle cx="103" cy="30.9998" r="1.66667" transform="rotate(-90 103 30.9998)" fill="#3056D3">
+                    </circle>
+                    <circle cx="132" cy="74.6668" r="1.66667" transform="rotate(-90 132 74.6668)" fill="#3056D3">
+                    </circle>
+                    <circle cx="132" cy="30.9998" r="1.66667" transform="rotate(-90 132 30.9998)" fill="#3056D3">
+                    </circle>
+                    <circle cx="1.66667" cy="60.0003" r="1.66667" transform="rotate(-90 1.66667 60.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="1.66667" cy="16.3333" r="1.66667" transform="rotate(-90 1.66667 16.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="16.3333" cy="60.0003" r="1.66667" transform="rotate(-90 16.3333 60.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="16.3333" cy="16.3333" r="1.66667" transform="rotate(-90 16.3333 16.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="31" cy="60.0003" r="1.66667" transform="rotate(-90 31 60.0003)" fill="#3056D3">
+                    </circle>
+                    <circle cx="31" cy="16.3333" r="1.66667" transform="rotate(-90 31 16.3333)" fill="#3056D3">
+                    </circle>
+                    <circle cx="45.6667" cy="60.0003" r="1.66667" transform="rotate(-90 45.6667 60.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="45.6667" cy="16.3333" r="1.66667" transform="rotate(-90 45.6667 16.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="60.3333" cy="60.0003" r="1.66667" transform="rotate(-90 60.3333 60.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="60.3333" cy="16.3333" r="1.66667" transform="rotate(-90 60.3333 16.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="88.6667" cy="60.0003" r="1.66667" transform="rotate(-90 88.6667 60.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="88.6667" cy="16.3333" r="1.66667" transform="rotate(-90 88.6667 16.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="117.667" cy="60.0003" r="1.66667" transform="rotate(-90 117.667 60.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="117.667" cy="16.3333" r="1.66667" transform="rotate(-90 117.667 16.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="74.6667" cy="60.0003" r="1.66667" transform="rotate(-90 74.6667 60.0003)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="74.6667" cy="16.3333" r="1.66667" transform="rotate(-90 74.6667 16.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="103" cy="60.0003" r="1.66667" transform="rotate(-90 103 60.0003)" fill="#3056D3">
+                    </circle>
+                    <circle cx="103" cy="16.3333" r="1.66667" transform="rotate(-90 103 16.3333)" fill="#3056D3">
+                    </circle>
+                    <circle cx="132" cy="60.0003" r="1.66667" transform="rotate(-90 132 60.0003)" fill="#3056D3">
+                    </circle>
+                    <circle cx="132" cy="16.3333" r="1.66667" transform="rotate(-90 132 16.3333)" fill="#3056D3">
+                    </circle>
+                    <circle cx="1.66667" cy="45.3333" r="1.66667" transform="rotate(-90 1.66667 45.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="1.66667" cy="1.66683" r="1.66667" transform="rotate(-90 1.66667 1.66683)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="16.3333" cy="45.3333" r="1.66667" transform="rotate(-90 16.3333 45.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="16.3333" cy="1.66683" r="1.66667" transform="rotate(-90 16.3333 1.66683)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="31" cy="45.3333" r="1.66667" transform="rotate(-90 31 45.3333)" fill="#3056D3">
+                    </circle>
+                    <circle cx="31" cy="1.66683" r="1.66667" transform="rotate(-90 31 1.66683)" fill="#3056D3">
+                    </circle>
+                    <circle cx="45.6667" cy="45.3333" r="1.66667" transform="rotate(-90 45.6667 45.3333)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="45.6667" cy="1.66683" r="1.66667" transform="rotate(-90 45.6667 1.66683)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="60.3333" cy="45.3338" r="1.66667" transform="rotate(-90 60.3333 45.3338)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="60.3333" cy="1.66683" r="1.66667" transform="rotate(-90 60.3333 1.66683)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="88.6667" cy="45.3338" r="1.66667" transform="rotate(-90 88.6667 45.3338)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="88.6667" cy="1.66683" r="1.66667" transform="rotate(-90 88.6667 1.66683)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="117.667" cy="45.3338" r="1.66667" transform="rotate(-90 117.667 45.3338)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="117.667" cy="1.66683" r="1.66667" transform="rotate(-90 117.667 1.66683)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="74.6667" cy="45.3338" r="1.66667" transform="rotate(-90 74.6667 45.3338)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="74.6667" cy="1.66683" r="1.66667" transform="rotate(-90 74.6667 1.66683)"
+                      fill="#3056D3">
+                    </circle>
+                    <circle cx="103" cy="45.3338" r="1.66667" transform="rotate(-90 103 45.3338)" fill="#3056D3">
+                    </circle>
+                    <circle cx="103" cy="1.66683" r="1.66667" transform="rotate(-90 103 1.66683)" fill="#3056D3">
+                    </circle>
+                    <circle cx="132" cy="45.3338" r="1.66667" transform="rotate(-90 132 45.3338)" fill="#3056D3">
+                    </circle>
+                    <circle cx="132" cy="1.66683" r="1.66667" transform="rotate(-90 132 1.66683)" fill="#3056D3">
+                    </circle>
+                  </svg>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div class="text-center">
-            <h1 class="text-balance text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+        <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
+          <div class="text-gray-600 dark:text-gray-300 mt-10 lg:mt-0">
+            <span class="block mb-4 text-lg font-semibold text-primary">
+              ¿Por qué elegirnos?
+            </span>
+            <h2 class="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
               Construimos tus sueños, ladrillo a ladrillo
-            </h1>
-            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-white">
-              Con años de experiencia en la industria de la construcción, nuestro equipo de expertos te brindará las
-              mejores soluciones para tus necesidades. <br />
-              ¡Confía en nosotros para hacer realidad tus ideas!
-            </p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-              <UButton label="Get started" color="white" />
-              <UButton label="Learn more" />
-            </div>
-          </div>
-        </div>
-        <div
-          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-45rem)]"
-          aria-hidden="true">
-          <div
-            class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#078ef0] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-          </div>
-        </div>
-      </div>
-    </UContainer>
-  </div>
-
-  <section id="nosotros" class="bg-white dark:bg-gray-900">
-    <div class="max-w-screen-xl mx-auto p-8 lg:py-16 lg:px-6">
-      <div class="flex flex-col gap-14 lg:gap-20">
-        <img src=/img/gallery/item91.jpg alt="" class="w-full rounded-2xl" />
-        <div class="flex flex-col gap-8 lg:gap-14">
-          <div class="flex flex-col md:flex-row gap-5">
-            <h2 class="text-3xl md:text-5xl font-bold flex-1 text-gray-500 dark:text-white dark:text-wihte">
-              ¿Quiénes somos?
             </h2>
-            <div class="flex-1 flex flex-col gap-y-2">
-              <p>
-                Somos una empresa experta en construcción, edificación de estructura, servicio de ferretería y plomería
-                en general.
-              </p>
-              <p>
-                Instalación y mantenimiento de aires acondicionados, servicios de desinfección, fumigación y control de
-                plagas, compra y venta de materiales eléctricos y baterías, luminarias, importación, exportación, ventas
-                y distribución de ropas, calzado y todo lo relacionado a tejidos textiles.
-              </p>
-              <p>
-                Gestión de mantenimiento y suministros de sistemas de incendio y protección, instalaciones en general.
-              </p>
-              <p>
-                Grupo Vaicorporation fue fundada 26 de mayo del año 2020 el bajo el concepto de ser el consorcio de
-                empresas proveedoras al estado dominicano y a las empresas privadas en general.
-              </p>
-            </div>
+            <p class="mb-5 text-base text-body-color">
+              Con años de experiencia en la industria de la construcción, nuestro equipo de expertos te brindará las
+              mejores soluciones para tus necesidades.
+            </p>
+            <p class="mb-8 text-base text-body-color">
+              Gestión de mantenimiento y suministros de sistemas de incendio y protección, instalaciones en general.
+            </p>
           </div>
         </div>
       </div>
+    </section>
+  </UContainer>
+  <!-- Quienes somos? -->
+  <div :class="inverted ? 'dark:bg-white bg-gray-900' : 'bg-white dark:bg-gray-900'">
+    <div class="max-w-screen-xl mx-auto">
+      <SectionBase :content="whoWeAre" :inverted="true" />
     </div>
-  </section>
-
+  </div>
   <!-- Mision, vision y valores -->
-  <section>
+  <div :class="!inverted ? 'dark:bg-white bg-gray-900' : 'bg-white dark:bg-gray-900'">
     <div class="max-w-screen-xl mx-auto">
-      <SectionSubtitle />
+      <SectionSubtitle :inverted="false" />
     </div>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios" class="bg-white dark:bg-gray-900">
+  </div>
+  <!-- Cards -->
+  <div clas="">
     <div class="max-w-screen-xl mx-auto">
-      <SectionBase :content="services">
-        <template #content>
-          <CardBase :content="services.content" />
-        </template>
-      </SectionBase>
+      <CardBase :content="services" />
     </div>
-  </section>
-
+  </div>
   <!-- TODO: ver que el cliente quiere -->
   <!-- Gallery -->
-  <section id="galeria">
+  <!-- <div class="bg-white dark:bg-gray-900">
     <div class="max-w-screen-xl mx-auto">
-      <SectionBase :content="gallery">
-        <template #content>
-          <GalleryMasonry />
-        </template>
-      </SectionBase>
+      <GalleryMasonry />
     </div>
-  </section>
-
-  <!-- <section id="testimonios">
-    <div class="max-w-screen-xl mx-auto">
-      <SectionBase :content="testimonial">
-        <template #content>
-          <BlockQuoteCard :content="testimonial.content" />
-        </template>
-      </SectionBase>
-    </div>
-  </section> -->
-
+  </div> -->
   <!-- Bloque de cita -->
-  <section>
+  <div>
     <div class=" max-w-screen-xl mx-auto">
       <BlockQuoteUserTestimonial :content="blockquote" />
     </div>
-  </section>
-
+  </div>
   <!-- TODO: hacer que el formulario envie -->
   <!-- Formulario de contacto -->
   <!-- <div class="bg-white dark:bg-gray-900">

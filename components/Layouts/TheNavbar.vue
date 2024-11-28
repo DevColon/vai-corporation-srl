@@ -7,11 +7,10 @@ const toggleNavbar = () => {
 }
 
 const navLinkItems = ref([
-	{ text: 'Inicio', href: '#inicio' },
-	{ text: 'Nosotros', href: '#nosotros' },
-	{ text: 'Servicios', href: '#servicios' },
-	{ text: 'Galeria', href: '#galeria' },
-	{ text: 'Contacto', href: 'javascript:void(0)' }
+	{ text: 'Home', href: 'javascript:void(0)' },
+	{ text: 'Payment', href: 'javascript:void(0)' },
+	{ text: 'About', href: 'javascript:void(0)' },
+	{ text: 'Blog', href: 'javascript:void(0)' }
 ])
 
 const handleClickOutside = (event: MouseEvent) => {
@@ -30,19 +29,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<header class="bg-primary-400 fixed z-30 w-full min-h-[4rem]">
+	<header
+		class="bg-primary-500 dark:bg-secondary-950 border-b border-gray-200 dark:border-gray-700 fixed z-30 w-full min-h-[4rem]">
 		<div class="px-3 py-3 lg:px-5 lg:pl-3">
 			<div class="flex items-center justify-between">
 				<div class="flex items-center justify-start">
-					<NuxtLink to="/" class="text-xl font-bold flex items-center lg:ml-2.5 text-white">
-						<img src="/img/logo.png" class="h-10 mr-2" alt="VAI CORPORATION SRL Logo">
-						<span class="self-center whitespace-nowrap">VAI CORPORATION SRL</span>
-					</NuxtLink>
+					<a href="/" class="text-xl font-bold flex items-center lg:ml-2.5 text-white">
+						<img src="/img/logo.png" class="h-6 mr-2" alt="Windster Logo">
+						<span class="self-center whitespace-nowrap">Windster</span>
+					</a>
 				</div>
 				<div class="flex gap-4">
 					<!-- Items del menu -->
 					<nav :class="{ hidden: !open }" id="navbarCollapse"
-						class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-primary-900 px-6 py-5 lg:p-0 shadow dark:bg-gray-700 lg:static lg:flex lg:w-fit lg:max-w-none lg:shadow-none">
+						class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-primary-900 px-6 py-5 lg:p-0 shadow dark:bg-dark-2 lg:static lg:flex lg:w-fit lg:max-w-none lg:shadow-none lg:dark:bg-transparent">
 						<ul class="block lg:flex">
 							<template v-for="(item, index) in navLinkItems" :key="index">
 								<li>

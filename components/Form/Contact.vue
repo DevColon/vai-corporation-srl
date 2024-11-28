@@ -39,7 +39,7 @@
               <h4 class="mb-1 text-xl font-bold text-dark dark:text-white">
                 Nuestro número telefónico
               </h4>
-              <p class="text-base text-body-color dark:text-dark-6">+1 (809) 473 - 6000</p>
+              <p class="text-base text-body-color dark:text-dark-6">(809) - 809 - 8009</p>
             </div>
           </div>
           <div class="mb-8 flex w-full max-w-[370px]">

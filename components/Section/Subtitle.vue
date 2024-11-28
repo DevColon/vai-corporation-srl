@@ -1,5 +1,8 @@
 <script setup>
 defineProps({
+  inverted: {
+    type: Boolean
+  },
   content: {
     type: Object,
     default: () => ({
@@ -31,7 +34,8 @@ defineProps({
 <template>
   <section>
     <div class="p-8 mx-auto lg:py-16 lg:px-6">
-      <div class="sm:text-lg text-gray-600 dark:text-white">
+      <div class="sm:text-lg"
+        :class="inverted ? 'dark:text-gray-600 text-gray-300' : 'text-gray-600 dark:text-gray-300'">
         <!-- Titulo -->
         <h2 class="mb-5 text-3xl font-bold sm:text-[40px]/[48px]">
           {{ content.title }}
